@@ -3,3 +3,23 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+
+
+
+@media only screen
+  and (min-device-width: 375px)
+  and (max-device-width: 812px) {
+
+    .sv_qstn label.sv_q_m_label{
+      margin-left: -10px !important;
+    }
+}
+
+@media only screen
+  and (min-device-width: 360px)
+  and (max-device-width: 740px) {
+
+    .sv_qstn label.sv_q_m_label{
+      margin-left: -10px !important;
+    }
+}
