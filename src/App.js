@@ -55,14 +55,14 @@ class App extends Component {
       <BrowserRouter>
         <div className="App-header">
           <h2 id="influxHeader">Influx Sport Pre-Training Questionaire Example</h2>
-            <NavLink to="/register">Register</NavLink>
+            <NavLink to="/">Register</NavLink>
             <NavLink to="/session">Session</NavLink>
         </div>
         <div className="surveyjs">
           {/*If you want to show survey, uncomment the line below*/}
           {/* <h1>SurveyJS library in action:</h1> */}
           <Switch>
-              <Route path="/register" component={Register} />
+              <Route path="/" component={Register} />
               <Route path="/session" component={Session} />
           </Switch>
 
