@@ -62,8 +62,9 @@ class App extends Component {
           {/*If you want to show survey, uncomment the line below*/}
           {/* <h1>SurveyJS library in action:</h1> */}
           <Switch>
-              <Route path="/" component={Register} />
+
               <Route path="/session" component={Session} />
+              <Route path="/" component={Register} />
           </Switch>
 
 
