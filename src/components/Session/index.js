@@ -8,12 +8,14 @@ import config from '../../config';
 class Session extends Component {
   constructor(props) {
     super(props);
-    Firebase.initializeApp(config);
+    // Firebase.initializeApp(config);
 
     this.state = {
       developers: []
     };
   }
+
+
 
 surveyJSON = {"pages":[{"name":"page5","elements":[{"type":"matrixdropdown","name":"question2","title":"CORE Activity","columns":[{"name":"I Have Never Performed this Drill"},{"name":"Am Familiar - Need Help with Technique"},{"name":"Can Perform Drill without Instruction"},{"name":"Drill Not Challenging - let's increase Intensity"}],"choices":["1"],"cellType":"checkbox","rows":["Front Plank\t\t","Side plank (Right, Left, Rest)\t","Heel Touches\t\t","Crunches\t\t"]}]}],
 completedHtml: "<p><h4>Session has been logged</h4></p>"}

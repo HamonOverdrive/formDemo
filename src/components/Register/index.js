@@ -9,18 +9,10 @@ class Register extends Component {
 
   constructor(props) {
     super(props);
-    Firebase.initializeApp(config);
+    // Firebase.initializeApp(config);
 
     this.state = {
-      atheletes: [],
-      // name: '',
-      // currentSport: [],
-      // skillMetric : {},
-      // weekRoutine: {},
-      // injury: '',
-      // injuryOne: '',
-      // injuryTwo: '',
-      // injuryThree: ''
+      athletes: [],
     };
 
     this.onComplete = this.onComplete.bind(this)
@@ -29,6 +21,7 @@ class Register extends Component {
   componentDidMount() {
     this.getUserData();
   }
+
 
   getUserData = () => {
     let ref = Firebase.database().ref("/");
@@ -61,45 +54,16 @@ class Register extends Component {
 
   onComplete(result) {
     const completed = result.data
-
-    let name = completed.name;
-    let currentSport = completed.currentSport;
-    let weekRoutine = completed.weekRoutine;
-    let skillMetric = completed.skillMetric;
-    let injury = completed.injury;
-    let injuryOne = completed.injuryOne;
-    let injuryTwo = completed.injuryTwo;
-    let injuryThree = completed.injuryThree;
-    console.log(name, currentSport, weekRoutine, skillMetric, injury, injuryOne,
-      injuryTwo, injuryThree)
-
-    // let uid = this.refs.uid.value;
-    // let name = this.refs.name.value;
-    // let currentSport = this.refs.currentSport.value;
-    // let weekRoutine = this.refs.weekRoutine.value;
-    // let skillMetric = this.refs.skillMetric.value;
-    // let injury = this.refs.injury.value;
-    // let injuryOne = this.refs.injuryOne.value;
-    // let injuryTwo = this.refs.injuryTwo.value;
-    // let injuryThree = this.refs.injuryThree.value;
-
-    // if (uid && name){
-    //   const { atheletes } = this.state;
-    //   const devIndex = atheletes.findIndex(data => {
-    //     return data.uid === uid
-    //   });
-    //   atheletes[devIndex].name = name;
-    //   // atheletes[devIndex].role = role;
-    //   this.setState({ atheletes });
-    // }
-    if (name  ) {
       const uid = new Date().getTime().toString();
-      const { atheletes } = this.state;
+      const { athletes } = this.state;
+      let obj = {}
+      for(let key in completed){
+        obj[key] = completed[key]
+      }
+      obj.uid = uid
 
-      atheletes.push({ uid, name, currentSport, weekRoutine, skillMetric, injury, injuryOne,
-      injuryTwo, injuryThree })
-      this.setState({ atheletes });
-    }
+      athletes.push(obj)
+      this.setState({ athletes });
 
     // for(var key in completed){
     //   console.log(key,':', completed[key])

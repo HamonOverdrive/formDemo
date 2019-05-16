@@ -24,6 +24,10 @@ import "icheck/skins/square/blue.css";
 import { Router, Route, Link, NavLink, BrowserRouter, Switch} from 'react-router-dom';
 import Register from './components/Register';
 import Session from './components/Session';
+import Athletes from './components/Athletes';
+import SingleAthlete from './components/Athletes/components/SingleAthlete'
+import Firebase from 'firebase';
+import config from './config';
 window["$"] = window["jQuery"] = $;
 require("icheck");
 
@@ -44,10 +48,11 @@ widgets.bootstrapslider(Survey);
 
 class App extends Component {
 
+  constructor(props) {
+    super(props);
+    Firebase.initializeApp(config);
 
-
-
-
+  }
 
   render() {
     return (
@@ -57,13 +62,16 @@ class App extends Component {
           <h2 id="influxHeader">Influx Sport Pre-Training Questionaire Example</h2>
             <NavLink to="/">Register</NavLink>
             <NavLink to="/session">Session</NavLink>
+            <NavLink to="/athletes">Athletes</NavLink>
         </div>
         <div className="surveyjs">
           {/*If you want to show survey, uncomment the line below*/}
           {/* <h1>SurveyJS library in action:</h1> */}
           <Switch>
-
+              <Route exact path="/athletes" component={Athletes} />
+              <Route path="/athletes/:athleteId" component={SingleAthlete}></Route>
               <Route path="/session" component={Session} />
+
               <Route path="/" component={Register} />
           </Switch>
 
