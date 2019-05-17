@@ -1,12 +1,18 @@
 {
-  "main.css": "static/css/main.4325643d.css",
-  "main.css.map": "static/css/main.4325643d.css.map",
-  "main.js": "static/js/main.2e8d8ac4.js",
-  "main.js.map": "static/js/main.2e8d8ac4.js.map",
-  "static/media/glyphicons-halflings-regular.eot": "static/media/glyphicons-halflings-regular.f4769f9b.eot",
-  "static/media/glyphicons-halflings-regular.svg": "static/media/glyphicons-halflings-regular.89889688.svg",
-  "static/media/glyphicons-halflings-regular.ttf": "static/media/glyphicons-halflings-regular.e18bbf61.ttf",
-  "static/media/glyphicons-halflings-regular.woff": "static/media/glyphicons-halflings-regular.fa277232.woff",
-  "static/media/glyphicons-halflings-regular.woff2": "static/media/glyphicons-halflings-regular.448c34a5.woff2",
-  "static/media/logo.svg": "static/media/logo.5d5d9eef.svg"
+  "files": {
+    "main.css": "/formDemo/static/css/main.cf81bbd3.chunk.css",
+    "main.js": "/formDemo/static/js/main.fe56fd51.chunk.js",
+    "main.js.map": "/formDemo/static/js/main.fe56fd51.chunk.js.map",
+    "runtime~main.js": "/formDemo/static/js/runtime~main.3f1afdb9.js",
+    "runtime~main.js.map": "/formDemo/static/js/runtime~main.3f1afdb9.js.map",
+    "static/css/2.80c5aca5.chunk.css": "/formDemo/static/css/2.80c5aca5.chunk.css",
+    "static/js/2.2c00a3cf.chunk.js": "/formDemo/static/js/2.2c00a3cf.chunk.js",
+    "static/js/2.2c00a3cf.chunk.js.map": "/formDemo/static/js/2.2c00a3cf.chunk.js.map",
+    "index.html": "/formDemo/index.html",
+    "precache-manifest.dcac56902162d5628684cd1f3abd4532.js": "/formDemo/precache-manifest.dcac56902162d5628684cd1f3abd4532.js",
+    "service-worker.js": "/formDemo/service-worker.js",
+    "static/css/2.80c5aca5.chunk.css.map": "/formDemo/static/css/2.80c5aca5.chunk.css.map",
+    "static/css/main.cf81bbd3.chunk.css.map": "/formDemo/static/css/main.cf81bbd3.chunk.css.map",
+    "static/media/logo.svg": "/formDemo/static/media/logo.5d5d9eef.svg"
+  }
 }
