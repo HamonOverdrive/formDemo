@@ -35,7 +35,7 @@ class Athletes extends Component {
     console.log(this.state.athletes)
       return (
         <div className="container">
-          <table className="table table-dark">
+          <table className="table">
         <thead>
           <tr>
             <th scope="col">#</th>
